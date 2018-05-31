@@ -1,0 +1,64 @@
+/*书籍总体 */
+.books-content{
+  margin-top: 10rpx;
+}
+
+.book-container{
+  margin: 20rpx 20rpx 0 2rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.book-viewimg{
+  margin-right: 20rpx;
+  width: 186px;
+  height: 150px;
+  margin-left: 10rpx;
+}
+
+.book-content{
+  margin-left: 10rpx;
+  font-family: "仿宋";
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.book-title{
+  font-family: "楷体";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.book-char{
+  font-family: "楷体";
+  font-weight: 700;
+  color: #965;
+}
+
+.bordersetting{
+  margin-top: 20rpx;
+  border-radius: 10%;
+  background-color: #f9f9f9;
+}
+
+.book-summary{
+  margin-top: 10rpx;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.book-content .btn{
+  border: 1px solid #109059;
+  margin: 20rpx 200rpx 0 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+}
+.book-content .btn text{
+  color: #109059;
+}

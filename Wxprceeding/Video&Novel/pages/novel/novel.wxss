@@ -1,0 +1,75 @@
+/* pages/test/test.wxss */
+@import 'catagroy-template/catagroy-template.wxss';
+@import 'novel-list-template/novel-list-template.wxss';
+
+.pages-container{
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+.pages-container.active{
+  color: red
+}
+
+.model{
+  margin-top: 400rpx;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  background-color: #d1d1d1;
+}
+.chentuo{
+  margin-left: 90%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 80rpx;
+  background-color: #f7f7f7;
+  z-index: 99;
+}
+.img{
+  margin-top: 20rpx; 
+}
+.scroll-container{
+    height: 80rpx;
+    width: 90%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #f7f7f7;
+    font-size: 16px;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.search{
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 99;
+}
+
+.search-imgfirst{
+  margin-top: 20rpx;
+  margin-left:20rpx;
+}
+.search input{
+  height:100%;
+  width:600rpx;
+  margin-left:20px;
+  font-size:18px;  
+}
+.search-input{
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-left: 20rpx;
+}
+.search-imgsec{
+    margin-top: 20rpx;
+}

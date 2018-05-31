@@ -1,0 +1,10 @@
+<template name="catagroyTemplate">
+  <view class='template-container'>
+    <block wx:for="{{catagroy}}" wx:for-item="item" wx:key="key">
+      <view class='title' catchtap='onPages' 
+      data-url="{{item.url}}" data-title="{{item.title}}">
+        <text class='button'>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</template>

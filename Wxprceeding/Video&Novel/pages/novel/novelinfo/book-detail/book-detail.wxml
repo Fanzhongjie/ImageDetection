@@ -1,0 +1,56 @@
+<!--pages/index/book-detail/book-detail.wxml-->
+<view class='book-detail-container'>
+  <image class='head-img' src="{{bookinfo.img}}"></image>
+  <view class='head-img-hover' data-src="{{bookinfo.img}}">
+    <text class='main-title'>{{bookinfo.titlesub}}</text>
+    <text class='sub-title'>{{bookinfo.author}}</text>
+  </view>
+  <image class='book-img' src="{{bookinfo.img}}" data-src="{{bookinfo.img}}"/>
+  
+  <view class='status-container'>
+    <view class='original-title'>
+      <text>{{bookinfo.title}}</text>
+    </view>
+    <view class='flex-row'>
+      <view class='status'>
+        <text class='mark'>小说状态：</text>
+        <text>{{bookDetail.status}}</text>
+      </view>
+    </view>
+  </view>
+    
+  <view class='hr'></view>
+    <view class='synopsis'>
+      <text class='synopsis-font'>小说简介</text>
+      <text class='summary-content'>{{detailSummary}}</text>
+    </view>
+  <view class='hr'></view>
+
+  <view class='charpter-container'>
+    <text class='synopsis-font'>最新章节</text>
+    <!-- 在此只显示最新章节-->    
+     <block wx:for="{{bookDetail.latestChapters}}" wx:for-item="item" wx:key="key" wx:for-index="idx">
+      <view class='chapter-container'>
+        <view catchtap='OnChapter' data-chapterurl="{{item.url}}" 
+        data-chaptername="{{item.name}}" data-total="{{bookDetail.latestChapters.length}}" 
+        data-index="{{bookDetail.latestChapters.length - 1 - idx}}">
+          <text class='chapter-Content'>{{item.title}}</text>
+          <view class='chapter-time'>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+      </view> 
+    </block>
+    <view class='btn-container'>
+      <view class='flex-row'>
+        <view class='btn' catchtap='fromStart'>
+          <text>开始阅读</text>
+        </view>
+        <view class='btn' catchtap='getChapterDirectory'>
+          <text>目录</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

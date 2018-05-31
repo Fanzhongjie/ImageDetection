@@ -1,0 +1,57 @@
+<!--pages/index/book-detail/chapter-directory/chapter-directory.wxml-->
+<view class='chapters-container'>
+  <view class='biaoti'>
+    <view class='flex-row'>
+      <text>目录</text>
+      <text class='standard-directory'>共{{chapters.length}}章</text>
+    </view>
+  </view>
+  <view class='chapters-container'>
+    <block wx:for="{{showchapters}}" wx:for-item='item' wx:for-index='idx' wx:key="key">
+      <view catchtap='OnChapter' data-index="{{idx}}" data-total="{{chapters.length}}"
+      data-url="{{item.url}}" class='chapter-name'>
+        <title>{{item.name}}</title>
+      </view>
+      <view class='hr'></view>
+    </block>
+  </view>
+
+  <view class='dire-container'>
+    <view class='flex-row'>
+      
+      <view class='space' catchtap='toPrevious'>
+        <text class='btn'>上一页</text>
+      </view>
+      <picker bindchange="bindPickerChange" value="{{shownum}}" range="{{absDirectory}}">
+          <text class='btn'>{{isShow}}</text>
+      </picker>
+      <!-- <view> -->
+        <!-- <view catchtap='modalinput' class='space'> -->
+      <!-- </view>   -->
+        <!-- 使用绝对定位  
+        <view hidden="{{hiddenmodalput}}" class='hiddened' catchtap='cancleTab'>
+          <view class='showed'>
+            <view class='syfont'>
+              <text>请选择</text>
+              <scroll-view scroll-y='true' scroll-top="{{scrollTop}}"
+              scroll-with-animation="true">
+                <block wx:for="{{absDirectory}}" wx:for-item="item" wx:for-index="idx" 
+                wx:key="key">
+                  <view catchtap="changeChapters" data-idx="{{idx}}">
+                    <text>{{item}}</text>
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+          </view>
+        </view> -->
+        
+      <!-- </view>   -->
+      
+      <view class='space' catchtap='toNextList'>
+        <text class='btn'>下一页</text>
+      </view>
+
+    </view>
+  </view>
+</view>

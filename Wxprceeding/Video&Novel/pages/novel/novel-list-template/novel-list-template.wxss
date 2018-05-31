@@ -1,0 +1,12 @@
+/*书籍总体 */
+@import '../novel-template/novel-template.wxss';
+
+.grid-container{
+  height: 1300rpx;
+  margin: 40rpx 0 auto 6rpx;
+}
+
+.novel-container{
+  float: left;
+  margin-bottom: 40rpx;
+}

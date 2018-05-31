@@ -1,0 +1,32 @@
+<!--pages/test/test.wxml-->
+<import src='catagroy-template/catagroy-template.wxml'/>
+<import src='novel-list-template/novel-list-template.wxml'/>
+
+<view class='test-container'>
+  <view wx:if="{{noSearch}}">
+    <view class='flex-row'>
+        <view class='chentuo' catchtap='getToSearch'>
+       <icon type='search' size='16' class='img'></icon>
+      </view>
+      <scroll-view class='scroll-container' scroll-x='true' scroll-left="{{navScrollLeft}}" scroll-with-animation="true">
+        <block wx:for="{{allPages}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+          <view class="pages-container {{currentTab == idx?'active':''}}" data-current="{{idx}}" bindtap='switchNav'>
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class='search'>
+      <icon type='search' size='16' class='search-imgfirst'></icon>
+      <input name='search-input' placeholder='重生' class='search-input'
+      bindfocus='onreadFoucs' bindblur='onreadBlur' >重生</input>
+      <icon type='clear' size='16' class='search-imgsec' catchtap='getOutSearch'></icon>
+    </view>
+  </view>
+  
+  <view class='books-container'>
+    <template is="novelListTemplate" data="{{currentshowbooks}}"></template>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<import src='../novel-template/novel-template.wxml'/>
+
+<template name="novelListTemplate">
+  <view class='grid-container'>
+      <block wx:for="{{currentshowbooks}}" wx:for-item="item" wx:key="key" wx:for-index="index">
+        <view class='novel-container'>
+          <template is='novelTemplate' data="{{...item,index}}" />
+        </view>
+      </block>
+  </view>
+</template>

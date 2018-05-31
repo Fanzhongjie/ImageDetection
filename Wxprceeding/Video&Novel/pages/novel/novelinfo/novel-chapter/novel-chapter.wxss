@@ -1,0 +1,69 @@
+/* pages/index/novel-chapter/novel-chapter.wxss */
+.chaptercontent-container{
+   background-color: #bfe8bb; 
+}
+
+/*设置标题*/
+.chapter-title{
+  align-items: center;
+}
+.chapter-title text{
+  margin-top: 10rpx;
+  font-family: "方正舒体";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.huanhang{
+  margin-top: 20rpx;
+}
+.scrap{
+  margin: 0 30rpx;
+}
+/*正文字体*/
+.charcter{
+  font-family: "楷体";
+  font-size: 18px;
+  font-weight: 200;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.before-show{
+  /* position: absolute; */
+  top: 500px; 
+  margin-left: 100rpx;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+
+.operate{
+  margin-top: 20rpx;
+  margin-left: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.before-show view{
+  margin-left: 20rpx;
+}
+.operate view{
+  margin-left: 20rpx;
+}
+.button{
+  border: 1px solid #109059;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #109059;
+  font-size: 16px;
+  font-family: '楷体';
+}
+
+.nonuse{
+  border: 1px solid #336666;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #336666;
+  font-size: 16px;
+  font-family: '楷体';
+}

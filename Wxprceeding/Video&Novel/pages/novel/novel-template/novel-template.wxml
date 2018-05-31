@@ -1,0 +1,10 @@
+<template name='novelTemplate'>
+  <view class='book-container'  bindtap='onReading' 
+  data-title="{{title}}" data-author="{{author}}" 
+  data-imgurl="{{imgUrl}}" data-bookurl="{{bookUrl}}" data-titlesub="{{titlesub}}">
+        <image src="{{imgUrl}}" class='book-viewimg' binderror='errorfunc' data-idx="{{index}}"></image>
+        <view class='book-content'>
+          <text class='book-title'>{{titlesub}}</text>
+        </view>
+      </view>
+</template>

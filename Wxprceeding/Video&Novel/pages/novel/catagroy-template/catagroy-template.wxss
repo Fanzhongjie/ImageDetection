@@ -1,0 +1,17 @@
+.template-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.title{
+  margin: 10rpx;
+}
+
+.button{
+  border: 1px solid #109059;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #109059;
+  font-size: 12px;
+  font-family: '楷体';
+}

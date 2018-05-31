@@ -1,0 +1,33 @@
+<!--pages/index/novel-chapter/novel-chapter.wxml-->
+<view class='chaptercontent-container'>
+  <view class='chapter-title'>
+    <text>{{name}}</text>
+  </view>
+  <view  class="huanhang"></view>
+  
+  <view catchtap='changeShowop'>
+  <block wx:for="{{chapterSegments}}" wx:for-item="item" wx:key="key">
+    <view class='scrap'>
+      <text class='charcter'>{{item}}</text>
+    </view>
+  </block>
+  </view>
+  
+  <view class="{{showOp?'before-show':'operate'}}">
+    <view wx:if="{{topre}}">
+      <text class='button' catchtap='onPre'>上一章</text>
+    </view>
+    <view wx:else>
+      <text class='nonuse'>上一章</text>
+    </view>
+    <view>
+      <text class='button' catchtap='onDirectory'>目录</text>
+    </view>
+    <view wx:if="{{tonext}}">
+      <text class='button' catchtap='onNext'>下一章</text>
+    </view>
+    <view wx:else>
+      <text class='nonuse'>下一章</text>
+    </view>
+  </view>
+</view>

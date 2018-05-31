@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+
+    "pages/novel/novel",
+    "pages/novel/novelinfo/novelinfo",
+    "pages/novel/novelinfo/novel-chapter/novel-chapter",
+    "pages/novel/novelinfo/book-detail/book-detail",
+    "pages/novel/novelinfo/book-detail/chapter-directory/chapter-directory",
+    
+    "pages/movie/movie",
+    "pages/movie/movie-more/movie-more",
+    "pages/movie/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/movie/movie",
+      "text": "电影",
+      "iconPath": "pages/images/dianying.png",
+      "selectedIconPath": "pages/images/dianying.png"
+    },
+    {
+      "pagePath": "pages/novel/novel",
+      "text": "小说",
+      "iconPath": "pages/images/novel.png",
+      "selectedIconPath": "pages/images/novel.png"
+    }],
+    "selectedColor": "#109D59",
+    "borderStyle": "black"
+  }
+}

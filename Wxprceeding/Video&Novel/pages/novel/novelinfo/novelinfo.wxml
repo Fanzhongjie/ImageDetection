@@ -1,0 +1,18 @@
+<import src='novel-list-template/novel-list-template.wxml' />
+
+<view class='container'>
+  <view class='search'>
+    <icon src='' size='14' class='search-imgfirst'></icon>
+    <input name='search-input' placeholder='重生' class='search-input'
+    bindfocus='onreadFoucs' bindblur='onreadBlur' >重生</input>
+    <icon src='' size='14' class='search-imgsec'></icon>
+  </view>
+  <view class='books-container'>
+    <view wx:if="{{showbooks}}">
+      <template is="novelListTemplate" data="{{...books_list}}"></template>
+    </view>
+    <view wx:else>
+      <template is="novelListTemplate" data="{{...search_books}}"></template>  
+    </view>
+  </view>
+</view>
